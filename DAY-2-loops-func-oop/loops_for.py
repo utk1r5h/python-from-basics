@@ -60,3 +60,30 @@ for ch in "utkarsh shukla":
   rev = ch + rev
 
 print(rev)
+
+
+# 2d loops 
+
+for i in range(3):
+  for j in range(4):
+    print("*", end="")
+  print()
+
+
+for i in range(10):
+  for j in range(i):
+    print("*",end="")
+  print()
+
+
+# diamond pattern 
+
+n=4 
+
+for i in range(1, n+1):
+  print(" "*(n-i), end="")
+  print("*"*(2*i-1))
+
+for i in range(n-1,0,-1):
+  print(" "*(n-i), end="")
+  print("*"*(2*i-1))
