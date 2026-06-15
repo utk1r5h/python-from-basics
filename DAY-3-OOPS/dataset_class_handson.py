@@ -26,28 +26,64 @@
 # new model 
 
 
-class Model:
-  def __init__(self, modelType, isTrained=False, hyperparams=None):
+# class Model:
+#   def __init__(self, modelType, isTrained=False, hyperparams=None):
 
-    allowed = {"linear", "logistic", "decisionTree"}
-    if modelType not in allowed:
-      raise ValueError(
-        f"unknown model type {self.modelType}, choose from {allowed}"
+#     allowed = {"linear", "logistic", "decisionTree"}
+#     if modelType not in allowed:
+#       raise ValueError(
+#         f"unknown model type {self.modelType}, choose from {allowed}"
+#       )
+    
+#     self.modelType=modelType
+#     self.isTrained=isTrained
+#     self.hyperparams=hyperparams if hyperparams is not None else {}
+#     self.weights = None
+
+#   def summary(self):
+#     print(
+#       f"model type is {self.modelType} | Trained: {self.isTrained}, "
+#       f" hyperparams: {self.hyperparams}"
+#     )
+
+# m = Model("linear", hyperparams={"lr": 0.01, "epochs":100})
+# m.summary()
+
+# m = model("new model")
+
+
+
+# final model class 
+
+
+class Model:
+  def __init__(self, model_type, is_trained = False, hyperparams=None):
+    if(type(model_type)!= str):
+      raise TypeError(
+        f"{model_type} is not in the correct string format, please correct it"
       )
     
-    self.modelType=modelType
-    self.isTrained=isTrained
+    self.model_type=model_type
+    self.is_trained=is_trained
     self.hyperparams=hyperparams if hyperparams is not None else {}
     self.weights = None
 
   def summary(self):
-    print(
-      f"model type is {self.modelType} | Trained: {self.isTrained}, "
-      f" hyperparams: {self.hyperparams}"
-    )
+        print(
+        f"model type is {self.model_type} | Trained: {self.is_trained}, "
+        f" hyperparams: {self.hyperparams}"
+        )
+
 
 m = Model("linear", hyperparams={"lr": 0.01, "epochs":100})
 m.summary()
 
-m = model("new model")
+m = Model(123)
+
+
+
+
+
+
+  
 
