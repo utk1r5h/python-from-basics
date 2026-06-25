@@ -13,7 +13,7 @@ __lt__
 __getitem__
 
 
-"""
+
 
 class Book:
   def __init__(self, title, author, num_pages):
@@ -49,3 +49,39 @@ print(B1+B2)
 print("Harry" in B2)
 
 print(B1.title)
+
+
+
+"""
+
+
+
+# class Person:
+#   def __init__(self, name, age):
+#     self.name = name
+#     self.age = age
+
+#   def __del__(self):
+#     print("object is being deleted")
+
+# p = Person("utkarsh", 21)
+
+
+
+class Vector:
+  def __init__(self, x, y):
+    self.x = x
+    self.y = y
+
+  def __add__(self, other):
+    return Vector(self.x + other.x, self.y+ other.y)
+  
+  def __repr__(self):
+    return f"X: {self.x}, y: {self.y}"
+
+v1 = Vector(10,20)
+v2= Vector(30, 40)
+v3 = v1+v2
+
+print(v3.x, v3.y)
+print(v3)
