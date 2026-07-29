@@ -1,0 +1,36 @@
+self contained location -> maintain separate and isolated env for python projects.
+
+
+
+how to make virtual env-> it is simply a directory
+
+%python3 -m venv my_name_of_the_env
+
+--> this would create the new directory for us 
+
+now we need to activate the virtual env
+
+% source my_name_of_the_env/bin/activate
+
+(my_name_of_the_env). -> this would appear 
+
+
+how to deactivate the env????
+
+simply type deactivate 
+
+
+
+
+pip list -> will show the list of already installed env
+
+
+
+how to save dependency???
+
+pip freeze > requirements.txt
+
+
+if we wanna use it in other system. make a virtual env and then simply run the command 
+
+pip install -r requirements.txt
