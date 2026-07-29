@@ -19,7 +19,7 @@
 
 def logged(function):
   def wrapper(*args, **kwargs):
-    value = function(*args, **kwargs)
+    value  = function(*args, **kwargs)
     with open('log_file.txt','a+') as f:
       fname = function.__name__
       print(f"{fname} returned value {value}")

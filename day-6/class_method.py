@@ -18,7 +18,7 @@ class Student:
     Student.total_cg+=cg
   
   def get_info(self):
-    return f"{self.name} == {self.gpa}"
+    return f"{self.name} == {self.cg}"
   
   @classmethod
   def get_count(cls):
@@ -34,5 +34,6 @@ class Student:
 s1 = Student("utkarsh", 8)
 s2 = Student("nishu", 8.5)
 print(Student.get_count())
+print(s1.get_info())
 
 print(Student.avg_gpa())

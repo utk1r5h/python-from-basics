@@ -25,3 +25,10 @@ print(type(c[1][1]))
 
 # arrays with default values 
 
+a1 = np.full((2,3,4), 1)
+
+
+a2 = np.zeros(10,3,4)
+
+
+#arange, linspace 

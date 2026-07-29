@@ -33,6 +33,7 @@ print(even)
 #3
 
 
+
 options = ["any", "albany", "apple", "world", "hello", ""]
 
 valid_strings =[string for string in options if len(string)>=2 if string[0]=='a' if string[-1]=='y']
@@ -41,6 +42,7 @@ print(valid_strings)
 
 
 #4 
+
 
 matrix =[[1,2,3],[4,5,6]]
 flat =[]
